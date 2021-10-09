@@ -38,11 +38,11 @@ public class BallMover : MonoBehaviour
             IsMoving = true;
         }
         
-        MoveBall();
+        Move();
         Jump();
     }
 
-    private void MoveBall()
+    private void Move()
     {
         Vector3 velocity = _rigidbody.velocity;
         velocity.x = _currentVelocity;
