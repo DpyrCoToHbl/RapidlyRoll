@@ -4,7 +4,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Rigidbody))]
 public class BallMover : MonoBehaviour
 {
-    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask _groundLayer;
     [SerializeField] private Ball _ball;
     [SerializeField] private Vector3 _startPosition;
     [SerializeField] private float _strafeForce;
@@ -64,7 +64,7 @@ public class BallMover : MonoBehaviour
     private void CheckGround()
     {
         const int SphereRadius = 1;
-        _isGrounded = Physics.CheckSphere(transform.position, SphereRadius,  groundLayer);
+        _isGrounded = Physics.CheckSphere(transform.position, SphereRadius,  _groundLayer);
     }
 
     private void OnEnable()
