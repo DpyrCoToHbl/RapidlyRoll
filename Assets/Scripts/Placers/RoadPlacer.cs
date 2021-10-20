@@ -5,7 +5,7 @@ public class RoadPlacer : ObjectPool
 {
     [SerializeField] private GameObject _roadPrefab;
     [SerializeField] private Ball _ball;
-    [SerializeField] private GameObject firstRoad;
+    [SerializeField] private GameObject _firstRoad;
 
     private readonly List<GameObject> _spawnedRoads = new List<GameObject>();
     private const int MaximumSpawnedRoads = 14;
@@ -13,7 +13,7 @@ public class RoadPlacer : ObjectPool
 
     private void Awake()
     {
-        _spawnedRoads.Add(firstRoad);
+        _spawnedRoads.Add(_firstRoad);
         Initialize(_roadPrefab);
     }
 
